@@ -240,7 +240,7 @@ const addToCart = (id, price) => {
   updatePrice("price", price);
 
   updateTaxAndCharge();
-  updateTotal();
+  updateTotal(); // added grand total
   document.getElementById("total-Products").innerText = count;
 };
 
@@ -256,12 +256,12 @@ const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
-  document.getElementById(id).innerText = total.toFixed(2);
+  document.getElementById(id).innerText = total.toFixed(2); // add 2 decimal value
 };
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = value.toFixed(2);
+  document.getElementById(id).innerText = value.toFixed(2); // add 2 decimal value
 };
 
 // update delivery charge and total Tax
@@ -287,7 +287,7 @@ const updateTotal = () => {
     getInputValue("price") +
     getInputValue("delivery-charge") +
     getInputValue("total-tax");
-  document.getElementById("total").innerText = grandTotal.toFixed(2);
+  document.getElementById("total").innerText = grandTotal.toFixed(2); // add 2 decimal value
 };
 
 // call API data

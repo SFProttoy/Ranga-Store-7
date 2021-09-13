@@ -37,6 +37,8 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+/* add some beautification in cards */
 .single-product {
   margin: 10px;
   padding: 10px;
